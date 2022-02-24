@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: hello waterui
-        run: echo Hello, waterui!
+        run: echo Hello, lightfish!
       
       - name: packages install
         run: npm install
