@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "@lightfish/tools",
   "version": "1.0.0",
   "scripts": {
@@ -11,7 +10,14 @@
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
-    "prepublishOnly": "npm run build"
+    "major": "npm version major",
+    "minor": "npm version minor",
+    "patch": "npm version patch",
+    "prepublish": "npm run build",
+    "pub": "npm publish --access=public",
+    "pub:major": "npm run major && npm run pub",
+    "pub:minor": "npm run minor && npm run pub",
+    "pub:patch": "npm run patch && npm run pub"
   },
   "main": "./dist/index",
   "module": "./dist/index.esm.js",
