@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "types": ["jest"],
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "experimentalDecorators": true, // 装饰器
+    "baseUrl": "./",
+    "paths": {
+      "@lightfish/tools": ["src/index.ts"]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.lf-newGuidance-wrapper {
+  --zIndex: 1000;
+}
+
+.lf-newGuidance-wrapper::before {
+  content: '';
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0,0,0,.6);
+  display: block;
+  left: 0;
+  top: 0;
+  z-index: var(--zIndex, 1000);
+  opacity: 0;
+  &.black::before {
+    opacity: 1;
+  }
+}
+
+.lf-newGuidance{
+  z-index: var(--zIndex, 1000);
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0,0,0,.6);
+    display: block;
+    left: 0;
+    top: 0;
+    z-index: var(--zIndex, 1000);
+    transition: opacity .5s linear;
+    opacity: 0;
+  }
+  &.black::before {
+    opacity: 1;
+  }
+}
+
+.new-hand {
+  animation: handSwing 1s linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes handSwing {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(20deg);
+  }
+}
